@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+
+    <style>
+      .box--1 {
+        background-color: blueviolet;
+      }
+      .box--2 {
+        background-color: orangered;
+      }
+      .box--3 {
+        background-color: green;
+        height: 150px;
+      }
+      .box--4 {
+        background-color: goldenrod;
+      }
+      .box--5 {
+        background-color: palevioletred;
+      }
+      .box--6 {
+        background-color: steelblue;
+      }
+
+      .box--7 {
+        background-color: yellow;
+      }
+
+      .box--8 {
+        background-color: crimson;
+      }
+
+      .container--1 {
+        display: none; /* display:grid */
+
+        font-family: sans-serif;
+        background-color: rgb(180, 180, 180);
+        font-size: 30px;
+        margin: 40px;
+
+        /* CSS GRID */
+        /* grid-template-columns: 200px 200px 100px 100px; ---->  /* 8 box var 4 sütun olursa -> 2 satir olur */
+        /* grid-template-rows: 300px 200px; */
+
+        /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr;
+        /* height: 600px; */
+
+        column-gap: 20px;
+        row-gap: 40px;
+      }
+
+      /*
+      .box--8 {
+        grid-column: 2 / 3; /* 2.sütunun başında 3.sütunun başına kadar 
+        grid-row: 1 / 2; /* 1.satirin başından 2. satirin başına kadar 
+      }
+
+      .box--2 {
+        grid-column: 1 / 2; /* grid-column: 1 / span 2; 
+        /* grid-cloumn: 1 / -1; 
+        grid-row: 2;
+      }
+      */
+
+      .container--2 {
+        font-family: sans-serif;
+        background-color: black;
+        font-size: 40px;
+        margin: 40px;
+
+        width: 700px;
+        height: 600px;
+
+        /* CSS GRID */
+        display: grid;
+        grid-template-columns: 125px 200px 125px;
+        grid-template-rows: 250px 100px;
+        gap: 50px;
+
+        /* Alining Tracks (parçalar) inside container ==>  Boş Alanı Doldurma ile iligli */
+
+        justify-content: center;
+        /* justify-content: space-between; */
+
+        /* align-content: start;
+        align-content: end; */ /*Flexbox'dan farklı yazılıyor */
+        align-content: center;
+
+        /* Alining Item INSIDE CELLS  ==> Hücre içersindeki Itemleri hareket ettirme */
+        align-items: center;
+        justify-items: center;
+      }
+
+      .box--3 {
+        align-self: end;
+        justify-self: end;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container--1">
+      <div class="box box--1">(1) HTML</div>
+      <div class="box box--2">(2) and</div>
+      <div class="box box--3">(3) CSS</div>
+      <div class="box box--4">(4) are</div>
+      <div class="box box--5">(5) amazing</div>
+      <div class="box box--6">(6) languages</div>
+      <!-- <div class="box box--7">(7) to</div> -->
+      <div class="box box--8">(8) learn</div>
+    </div>
+
+    <div class="container--2">
+      <div class="box box--1">(1)</div>
+      <div class="box box--3">(3)</div>
+      <div class="box box--4">(4)</div>
+      <div class="box box--5">(5)</div>
+      <div class="box box--6">(6)</div>
+      <div class="box box--7">(7)</div>
+    </div>
+    <a href="index.html">back to home</a>
+  </body>
+</html>

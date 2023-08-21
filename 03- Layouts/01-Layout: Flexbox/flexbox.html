@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+
+    <style>
+      .box--1 {
+        background-color: blueviolet;
+      }
+      .box--2 {
+        background-color: orangered;
+      }
+      .box--3 {
+        background-color: green;
+        height: 150px;
+      }
+      .box--4 {
+        background-color: goldenrod;
+      }
+      .box--5 {
+        background-color: palevioletred;
+      }
+      .box--6 {
+        background-color: steelblue;
+      }
+
+      .box--7 {
+        background-color: yellow;
+      }
+
+      .box--8 {
+        background-color: crimson;
+      }
+
+      .container {
+        font-family: sans-serif;
+        background-color: white;
+        font-size: 34px;
+        margin: 40px;
+
+        display: flex;
+        align-items: center; /* dikey */
+        justify-content: flex-start; /* yatay */
+        gap: 30px;
+      }
+
+      .box {
+        /*
+        DEFAULTS:
+        flew-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+        */
+
+        /* flex-basis: 200px;  */
+        /* bu taban genişletmesi container'e sığacak şekilde yapılır tam 200px olacak diye bir durum yok */
+
+        /* bunu değiştirme için flex-shrink: 0; yapilir. */
+        /* flex-shrink: 0; */
+        /* bu sefede container'e sığmaz ve bu durum tavsiye edilmez bazı durumlarda kullanılır. */
+
+        /* flex-grow: 1; */
+        /* büyümesine izin vermek için flex-basis i kapattık ve kullanabildiği alanın tamamını kullandı */
+
+        /* Not: bu 3 ü ayrı ayrı kullanılmaz */
+        /* flex: 0 1 auto |  <int>  <int> <lenght>
+        flex-grow, flex-shrink, flex-basis için önerilen kısaltma. */
+
+        /* flex: 0 0 200px; */
+
+        flex: 1;
+      }
+
+      .box--1 {
+        align-self: flex-start;
+        /* order: 2;
+        flex-grow: 2; */
+      }
+
+      .box--5 {
+        align-self: stretch;
+        order: 1;
+      }
+
+      .box--6 {
+        order: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box box--1">HTML</div>
+      <div class="box box--2">and</div>
+      <div class="box box--3">CSS</div>
+      <div class="box box--4">are</div>
+      <div class="box box--5">amazing</div>
+      <!-- <div class="box box--6">languages</div> -->
+      <!-- <div class="box box--7">to</div>
+        <div class="box box--8">learn</div> -->
+    </div>
+    <a href="index.html">back to home</a>
+  </body>
+</html>
