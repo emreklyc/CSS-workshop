@@ -154,10 +154,6 @@ Medium: 11px
   background-color: #cf711f;
 }
 
-.margin-right-small {
-  margin-right: 1.6rem !important;
-}
-
 .btn--right:link,
 .btn--right:visited {
   background-color: #fff;
@@ -210,6 +206,12 @@ Medium: 11px
   width: 3rem;
   height: 3rem;
   color: #e67e22;
+}
+
+/* Helper + Settins Classes */
+
+.margin-right-small {
+  margin-right: 1.6rem !important;
 }
 
 .margin--bottom--medium {
