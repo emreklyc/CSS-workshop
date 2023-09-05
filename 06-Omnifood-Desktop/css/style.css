@@ -594,3 +594,14 @@ body {
 .cta-form input::placeholder {
   color: #aaa;
 }
+
+.call-to-action *:focus {
+  /* tab ile odakları değiştirmeyi kaldırdık */
+  outline: none;
+  box-shadow: 0.1rem 0.1rem 0.1rem 0.5rem hsla(28, 80%, 90%, 0.5);
+
+  /*
+  outline: 4px dotted #e67e22;
+  outline-offset: 8px; 
+  */
+}
