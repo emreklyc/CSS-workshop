@@ -34,7 +34,9 @@ paragraph default: 1.6
 #2e1907
  #45260a
 --> Accents: 
---> Greys: 
+--> Greys:
+#888 
+#767676 -> #fff
 #6f6f6f  -> #fdf2e9
 #555
 #333
@@ -88,6 +90,10 @@ Medium: 11px
 
 .grid--4--cols {
   grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5--cols {
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .grid-center-vertically {
